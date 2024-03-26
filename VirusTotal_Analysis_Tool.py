@@ -92,7 +92,7 @@ def main():
     # This will check if the result is ready each 10 seconds, if so will print the result
     while True:
         if 'scan_id' in locals():
-            print("Fetching analysis report...")
+            #print("Fetching analysis report...")
             report = get_file_report(scan_id)
             if 'verbose_msg' in report and report['verbose_msg'] == 'Scan finished, information embedded':
                 print_analysis_results(report)
