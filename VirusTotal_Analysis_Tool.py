@@ -27,7 +27,7 @@ def scan_file(file_path):
         else:
             return {'error': f'Failed to scan file: {response.text}'}
 
-# For URL and Domains I didn't tested yet, maybe it is not working
+# For URL and Domains I didn't well tested it
 def scan_url(url):
     params = {'apikey': API_KEY, 'url': url}
     response = requests.post(VIRUSTOTAL_URL_SCAN_URL, data=params)
@@ -68,7 +68,7 @@ def print_analysis_results(report):
 def main():
     parser = argparse.ArgumentParser(description='VirusTotal analysis tool')
     parser.add_argument('-f', '--file', help='File path to analyze')
-    parser.add_argument('-u', '--url', help='URL to analyze NOT TESTED')
+#    parser.add_argument('-u', '--url', help='URL to analyze')
     args = parser.parse_args()
 
     if args.file:
