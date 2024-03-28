@@ -27,7 +27,7 @@ def scan_file(file_path):
         else:
             return {'error': f'Failed to scan file: {response.text}'}
 
-# For URL and Domains I didn't well tested it
+# For URL and Domains I need to finish and test
 def scan_url(url):
     params = {'apikey': API_KEY, 'url': url}
     response = requests.post(VIRUSTOTAL_URL_SCAN_URL, data=params)
